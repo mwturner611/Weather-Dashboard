@@ -14,6 +14,8 @@
     <title>Weather Dashboard</title>
 </head>
 <body>
+
+    <!-- header from bootstrap -->
     <header class="container-flex fixed-top">
         <h1>
             Weather Dashboard
@@ -23,60 +25,63 @@
     <Main>
 
         <div class="row">
-            <div class="col-md-4">
+            <!-- input form, seach button -->
+            <div class="col-md-4 buttonArea">
                 <label for="input">Search for a City:</label>
                 <form class="form-inline">
                     <input type="city" class="form-control" id="input" placeholder="City name">
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Search</button>
+                    <button type="submit" class="btn btn-primary" data-letter="0"><i class="fa fa-search"></i> Search</button>
                 </form>
             
             </div>
+            <!-- Large display of today's weather -->
             <div class="col-lg-8 container-fluid" id="infoBox">
-                <h3 id="cityDate"></h3>
-                <p id="todayTemp">Temperature:</p>
-                <p id="todayHumidity">Humidity:</p>
-                <p id="windSpeed">Wind Speed:</p>
-                <p id="uvIndex">UV Index:</p>
+                <h3 id="date0"></h3>
+                <p id="temp0">Temperature:</p>
+                <p id="humidity0">Humidity:</p>
+                <p id="ws0">Wind Speed:</p>
+                <p id="uv0">UV Index:</p>
             </div>
         </div>
 
         <div class="row">
+            <!-- where we will post the new city buttons -->
             <div class="col-md-4" Id="cityButtons">
             </div>
 
-
+            <!-- create the 5 blue boxes for the 5 day forecast -->
             <div class="col-lg-8">
                 <h3>5-Day Forecast:</h3>
                     <div class="row">
                         <div class="col-sm-2">
                             <h5 id="date1"></h5>
-                            <p id="symbolDay1"></p>
-                            <p id="TempDay1">Temp: </p>
-                            <p id="HumidityDay1">Humidity: </p>
+                            <img id="symbolDay1" height="30" width="30">
+                            <p id="temp1">Temp: </p>
+                            <p id="humidity1">Humidity: </p>
                         </div>
                         <div class="col-sm-2">
                             <h5 id="date2"></h5>
-                            <p id="symbolDay2"></p>
-                            <p id="TempDay2">Temp: </p>
-                            <p id="HumidityDay2">Humidity: </p>
+                            <img id="symbolDay2" height="30" width="30">
+                            <p id="temp2">Temp: </p>
+                            <p id="humidity2">Humidity: </p>
                         </div>
                         <div class="col-sm-2">
                             <h5 id="date3"></h5>
-                            <p id="symbolDay3"></p>
-                            <p id="TempDay3">Temp: </p>
-                            <p id="HumidityDay3">Humidity: </p>
+                            <img id="symbolDay3" height="30" width="30">
+                            <p id="temp3">Temp: </p>
+                            <p id="humidity3">Humidity: </p>
                         </div>
                         <div class="col-sm-2">
                             <h5 id="date4"></h5>
-                            <p id="symbolDay4"></p>
-                            <p id="TempDay4">Temp: </p>
-                            <p id="HumidityDay4">Humidity: </p>
+                            <img id="symbolDay4" height="30" width="30">
+                            <p id="temp4">Temp: </p>
+                            <p id="humidity4">Humidity: </p>
                         </div>
                         <div class="col-sm-2">
                             <h5 id="date5"></h5>
-                            <p id="symbolDay5"></p>
-                            <p id="TempDay5">Temp: </p>
-                            <p id="HumidityDay5">Humidity: </p>
+                            <img id="symbolDay5" height="30" width="30">
+                            <p id="temp5">Temp: </p>
+                            <p id="humidity5">Humidity: </p>
                         </div>
                     
                     </div>
@@ -90,7 +95,7 @@
     </footer>
 
 
-
+<!-- jquery, moment and your script file links -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="script.js"></script>
