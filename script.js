@@ -42,6 +42,12 @@ $(".btn-primary").on("click", function(event) {
     }        
 })
 
+// clear local storage
+$(".btn-danger").on("click",function(){
+    localStorage.clear();
+    location.reload();
+})
+
 
 // on click for created buttons
 $(".btn-secondary").on("click",function(event){
