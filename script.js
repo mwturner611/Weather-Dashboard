@@ -1,7 +1,7 @@
 // weather api call URLS
 var URLWeatherToday = "https://api.openweathermap.org/data/2.5/weather?q=";
 var URLWeatherForecast = "https://api.openweathermap.org/data/2.5/forecast?q=";
-var URLUVIndexToday = "http://api.openweathermap.org/data/2.5/uvi?appid=";
+var URLUVIndexToday = "https://api.openweathermap.org/data/2.5/uvi?appid=";
 
 // needed for weather api
 var key = "7beaf68a896729e45aa274746dd5eeda";
