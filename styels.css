@@ -33,3 +33,20 @@ h3{
     height: 150px;
     color: white;
 }
+
+.level1thru2{
+    background-color: green;
+    
+}
+.level3thru5{
+    background-color: yellow;
+}
+.level6thru8{
+    background-color: orange;
+}
+.level9thru10{
+    background-color: red;
+}
+.level11andAbove{
+    background-color: purple;
+}

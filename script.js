@@ -60,6 +60,24 @@ $(".btn-secondary").on("click",function(event){
     grabWeather(cityKey);        
 })
 
+// set style of UV Index text based on level of UV
+function hotBoxStyle(uv){
+    if (uv < 3){
+        $("#uv0").attr("class","level1thru2")
+    }
+    else if (uv >=3 && uv < 6){
+        $("#uv0").attr("class","level3thru5")
+    }
+    else if (uv >=6 && uv < 9){
+        $("#uv0").attr("class","level6thru8")
+    }
+    else if (uv >=9 && uv < 11){
+        $("#uv0").attr("class","level9thru10")
+    }
+    else {
+        $("#uv0").attr("class","level11andAbove")
+    }
+}
 
 // create city buttons from local storage
 function createCityButtons (){
@@ -135,7 +153,13 @@ function grabWeather(keyValue){
             method: "GET",
         })
         .then(function (response){
-            $("#uv0").text("UV Index: " + response.value);
+            // style uv text based on 
+            hotBoxStyle(response.value);
+            
+            // post uv to screen
+            $("#uv0").text(response.value);
+            
         })
     })
 }
+
